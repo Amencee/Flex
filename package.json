@@ -12,13 +12,16 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "core-js": "^3.6.5",
+    "parallax-js": "^3.1.0",
     "quasar": "^2.6.0",
     "vue": "^3.0.0",
+    "vue-parallaxy": "^1.1.1",
     "vue-router": "^4.0.0"
   },
   "devDependencies": {
+    "@quasar/app-webpack": "^3.0.0",
     "@types/node": "^12.20.21",
-    "@quasar/app-webpack": "^3.0.0"
+    "vue-parallax": "^1.1.1"
   },
   "browserslist": [
     "last 10 Chrome versions",

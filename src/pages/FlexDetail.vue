@@ -1,11 +1,11 @@
 <template>
-  <q-page class="row ">
+  <q-page class="row " style="width: 100%;height: 100%">
     <!--
         垂直水平居中：水平居中 justify-content: center
         垂直水平居中：垂直居中 align-items: center
     -->
 
-    <div class="box-detail-base">
+    <div class="box-detail-base" style="display: none">
 
       <div class="box" style="height: 40px;width: 20px;order: 2;flex-grow:1;  ">
         <div
@@ -22,6 +22,19 @@
     </div>
 
 
+    <div class="box-detail-base">
+
+      <span>
+        1
+      </span>
+
+      <span>
+       2
+      </span>
+
+
+    </div>
+
   </q-page>
 </template>
 
@@ -33,6 +46,10 @@ export default defineComponent({
   name: 'IndexPage',
   components: {ExampleComponent},
   setup() {
+    const chainId = 0x23;
+    const chainIdStr = "0x23";
+    console.log(chainId.toString() === chainIdStr);
+
 
     return {};
   }
@@ -45,7 +62,7 @@ export default defineComponent({
 .box-detail-base {
   background: #31CCEC;
   width: 100%;
-  height: 100px;
+  height: 500px;
   display: flex;
   justify-content: space-between; /** 子元素的排列方式 居中 左右最齐**/
   align-items: center; /** 子元素基准线 居中 左右最齐**/
@@ -61,6 +78,7 @@ export default defineComponent({
   justify-content: center;
   align-self: center;
   margin: 0 5px;
+  border-radius: 20px;
 
 }
 

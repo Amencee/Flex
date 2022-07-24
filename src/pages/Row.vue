@@ -2,6 +2,7 @@
   <q-page class="row ">
     <q-btn label="flex 子元素" size="md" color="primary" to="/flexDetail"/>
 
+
     <div class="row">
       <span>box-container-row-between 交叉轴的起点对齐</span>
       <div class="box-base bg-positive box-container-row-between">
@@ -78,12 +79,29 @@
 
 <script lang="ts">
 import ExampleComponent from 'src/components/ExampleComponent.vue';
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
   name: 'IndexPage',
   components: {ExampleComponent},
   setup() {
+    const refunds = ref<any[]>();
+    refunds.value = [];
+    console.log('Amence refunds 1', refunds.value)
+
+    refunds.value?.push(1);
+    refunds.value?.push(2);
+    refunds.value?.push(3);
+    refunds.value?.push(4);
+    refunds.value?.push(5);
+    console.log('Amence refunds 2', refunds.value)
+
+    refunds.value = refunds.value?.filter((item, index) => {
+      return index != 2;
+    });
+
+    console.log('Amence refunds 3', refunds.value)
+
 
     return {};
   }
@@ -139,5 +157,22 @@ export default defineComponent({
   align-self: baseline;
 
 }
+
+div {
+  animation: dong 1s infinite;
+}
+
+@keyframes dong {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, -10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
 
 </style>

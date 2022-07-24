@@ -8,6 +8,12 @@ const routes: RouteRecordRaw[] = [
       {path: '', component: () => import('src/pages/Row.vue')},
       {path: '/column', component: () => import('src/pages/Column.vue')},
       {path: '/flexDetail', component: () => import('src/pages/FlexDetail.vue')},
+      {path: '/position', component: () => import('src/pages/PositionPage.vue')},
+      {path: '/position1', component: () => import('src/pages/PositionPage1.vue')},
+      {path: '/position2', component: () => import('src/pages/PositionPage2.vue')},
+      {path: '/background', component: () => import('src/pages/BackgroundAttachment.vue')},
+      {path: '/background1', component: () => import('src/pages/BackgroundAttachment1.vue')},
+      {path: '/background2', component: () => import('src/pages/BackgroundImage.vue')},
     ],
   },
 
